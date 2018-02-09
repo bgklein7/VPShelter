@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace VPShelter
 {
-    public class Gizmo
+    public class Volunteer : Employee
     {
         //Fields
 
         private bool afterMidnight;
-        private bool spilledOnGizmo;
+        private bool spilledOnMogwai;
         private bool isLightOut;
         private int boredomLevel;
         private int foodAmount;
@@ -28,10 +28,10 @@ namespace VPShelter
             set { this.afterMidnight = value; }
         }
 
-        public bool SpilledOnGizmo
+        public bool SpilledOnMogwai
         {
-            get { return this.spilledOnGizmo; }
-            set { this.spilledOnGizmo = value; }
+            get { return this.spilledOnMogwai; }
+            set { this.spilledOnMogwai = value; }
         }
 
         public bool IsLightOut
@@ -78,9 +78,9 @@ namespace VPShelter
 
         //Constructors
 
-        public Gizmo() { }
+        public Volunteer() { }
 
-        public Gizmo(int hungerLevel, int thirstLevel, int boredomLevel)
+        public Volunteer(int hungerLevel, int thirstLevel, int boredomLevel)
         {
             this.hungerLevel = hungerLevel;
             this.thirstLevel = thirstLevel;
@@ -88,18 +88,18 @@ namespace VPShelter
         }
 
         //Methods
-        public int FeedGizmo()
+        public int FeedMogwai()
         {
             if (hungerLevel >= 1)
             {
-                Console.WriteLine("Gizmo has been fed.");
+                Console.WriteLine("Mogwai has been fed.");
 
                 Console.WriteLine("Is it after midnight? (type True or False)");
                 afterMidnight = bool.Parse(Console.ReadLine());
 
                 if (afterMidnight == true)
                 {
-                    Console.WriteLine("Gizmo is now a gremlin!");
+                    Console.WriteLine("Mogwai is now a gremlin!");
                     Console.WriteLine("");
                     Console.Title = "ASCII Art";
                     string title = @"
@@ -128,23 +128,23 @@ namespace VPShelter
             }
             else
             {
-                Console.WriteLine("Gizmo does not need to be fed.");
+                Console.WriteLine("Mogwai does not need to be fed.");
                 Console.WriteLine("");
                 return hungerLevel++;
             }
         }
-        public int WaterGizmo()
+        public int WaterMogwai()
         {
             if (thirstLevel >= 1)
             {
-                Console.WriteLine("Gizmo has been given some water.");
+                Console.WriteLine("Mogwai has been given some water.");
 
-                Console.WriteLine("Did you spill on Gizmo? (type True or False)");
-                spilledOnGizmo = bool.Parse(Console.ReadLine());
+                Console.WriteLine("Did you spill on mogwai? (type True or False)");
+                spilledOnMogwai = bool.Parse(Console.ReadLine());
 
-                if (spilledOnGizmo == true)
+                if (spilledOnMogwai == true)
                 {
-                    Console.WriteLine("Gizmo is now a gremlin!");
+                    Console.WriteLine("Mogwai is now a gremlin!");
                     Console.WriteLine("");
                     Console.Title = "ASCII Art";
                     string title = @"
@@ -175,23 +175,23 @@ namespace VPShelter
 
             else
             {
-                Console.WriteLine("Gizmo does not need anything to drink.");
+                Console.WriteLine("Mogwai does not need anything to drink.");
                 return thirstLevel++;
             }
         }
 
-        public int ActivateGizmo()
+        public int ActivateMogwai()
         {
             if (boredomLevel >= 1)
             {
-                Console.WriteLine("Gizmo has been allowed out to play");
+                Console.WriteLine("Mogwai has been allowed out to play");
 
                 Console.WriteLine("Is it light out? (type True or False)");
                 isLightOut = bool.Parse(Console.ReadLine());
 
                 if (isLightOut == true)
                 {
-                    Console.WriteLine("That hurt Gizmo! Quick! Get back inside!");
+                    Console.WriteLine("That hurt the mogwai! Quick! Get back inside!");
                     Console.WriteLine("");
                     return hungerLevel++ + thirstLevel++ + boredomLevel++;//to make go up by more than one use +=10
                 }
@@ -206,7 +206,7 @@ namespace VPShelter
 
             else
             {
-                Console.WriteLine("Gizmo needs to sleep.");
+                Console.WriteLine("Mogwai needs to sleep.");
                 return boredomLevel++;
             }
         }
@@ -214,6 +214,23 @@ namespace VPShelter
         public int TickMethod()
         {
             return boredomLevel++ + hungerLevel++ + thirstLevel++;
+        }
+
+        public override bool ShowID()
+        {
+            if(EmployeeID/2 == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public override string Uniform()
+        {
+            return "Name tag only";
         }
     }
 }

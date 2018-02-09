@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VPShelter
 {
-    public class TypeOfPet : Gizmo
+    public class Mogwai : VirtualPet
     {
         //fields
         //invisible
@@ -15,19 +15,16 @@ namespace VPShelter
         public string Type { get; set; }
         public string Diet { get; set; }
 
-        //Constructors
-        public TypeOfPet()
-        {
-            //default constructor
-        }
+        ////Constructors
+        //public Mogwai()
+        //{
+        //    //default constructor
+        //}
 
-        public TypeOfPet(string type, string diet)
-        {
-            Type = type;
-            Diet = diet;
-        }
-
-        //Methods
-        
+        //public Mogwai(string type, string diet)
+        //{
+        //    Type = type;
+        //    Diet = diet;
+        //}
     }
 }
