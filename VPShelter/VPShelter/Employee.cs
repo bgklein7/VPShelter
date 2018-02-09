@@ -13,6 +13,7 @@ namespace VPShelter
 
         //Properties
         public int EmployeeID { get; set; }
+        public string EmployeeName { get; set; }
 
         //Constructors
         public Employee()
@@ -20,9 +21,10 @@ namespace VPShelter
             //default constructor
         }
 
-        public Employee(int employeeID)
+        public Employee(int employeeID, string employeeName)
         {
             EmployeeID = employeeID;
+            EmployeeName = employeeName;
         }
 
         //Methods- Abstract

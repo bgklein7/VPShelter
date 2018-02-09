@@ -15,16 +15,26 @@ namespace VPShelter
         public string Type { get; set; }
         public string Diet { get; set; }
 
-        ////Constructors
-        //public Mogwai()
+        //Constructors
+       
+        public Mogwai()
+        {
+
+        }
+
+        public Mogwai(string type, string diet, string name, string description, int hungerLevel, int boredomLevel, int thirstLevel)
+        {
+            Type = type;
+            Diet = diet;
+        }
+
+        //Methods
+
+        //public int FedMogwai()
         //{
-        //    //default constructor
+        //    if()
         //}
 
-        //public Mogwai(string type, string diet)
-        //{
-        //    Type = type;
-        //    Diet = diet;
-        //}
+        
     }
 }

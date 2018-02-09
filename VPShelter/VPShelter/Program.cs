@@ -10,7 +10,14 @@ namespace VPShelter
     {
         static void Main(string[] args)
         {
-            Volunteer userMogwai = new Volunteer(5, 5, 5);
+            Mogwai mogwai1 = new Mogwai("Batch 1", "Paleo", "Gizmo", "Brown and White", 5, 4, 3);
+            Mogwai mogwai2 = new Mogwai("Batch 2", "South Beach", "Stripe", "Mahogany and White", 4, 5, 6);
+            Mogwai mogwai3 = new Mogwai("Batch 2", "Pescatarian", "Mohawk", "Black and White", 7, 2, 5);
+            Volunteer volunteer1 = new Volunteer(1234, "Ringo");
+            Volunteer volunteer2 = new Volunteer(1235, "George");
+            Manager manager1 = new Manager(1236, "John", 30000.00);
+            
+           
             int userChoice;
 
             Console.WriteLine("Welcome to the Virtual Pet Tender App!");
@@ -19,10 +26,10 @@ namespace VPShelter
 
             do
             {
-                Console.WriteLine("Gizmo the Mogwai");
-                Console.WriteLine("Hunger: " + userMogwai.HungerLevel + " out of 10");
-                Console.WriteLine("Thirst: " + userMogwai.ThirstLevel + " out of 10");
-                Console.WriteLine("Boredom: " + userMogwai.BoredomLevel + " out of 10");
+                Console.WriteLine("Mogwai: " + mogwai1.Name + " | " + mogwai2.Name + " | " + mogwai3.Name);
+                Console.WriteLine("Hunger (out of 10): " + mogwai1.HungerLevel + " | " + mogwai2.HungerLevel + " | " + mogwai3.HungerLevel);
+                Console.WriteLine("Thirst (out of 10): " + mogwai1.ThirstLevel + " | " + mogwai2.ThirstLevel + " | " + mogwai3.ThirstLevel);
+                Console.WriteLine("Boredom (out of 10): " + mogwai1.BoredomLevel + " | " + mogwai2.BoredomLevel + "|" + mogwai3.BoredomLevel);
                 Console.WriteLine("");
                 Console.WriteLine("What would you like to do for the mogwai?");
                 Console.WriteLine("Feed mogwai, type 1");
@@ -35,13 +42,13 @@ namespace VPShelter
                 switch (userChoice)
                 {
                     case 1:
-                        userMogwai.FeedMogwai();
+                        mogwai3.FeedMogwai();
                         break;
                     case 2:
-                        userMogwai.WaterMogwai();
+                        mogwai3.WaterMogwai();
                         break;
                     case 3:
-                        userMogwai.ActivateMogwai();
+                        mogwai3.ActivateMogwai();
                         break;
                     case 4:
                         Console.WriteLine("Goodbye.");
@@ -49,7 +56,7 @@ namespace VPShelter
                 }
 
                 //tick
-                userMogwai.TickMethod();
+                //userVirtualPet.TickMethod();
 
             } while (userChoice != 4);
         }

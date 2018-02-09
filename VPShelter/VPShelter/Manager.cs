@@ -20,7 +20,7 @@ namespace VPShelter
             //default constructor
         }
 
-        public Manager(double salary)
+        public Manager(int employeeID, string employeeName, double salary)
         {
             Salary = salary;
         }
@@ -28,7 +28,7 @@ namespace VPShelter
         //Methods
         public override bool ShowID()
         {
-            if(EmployeeID/2 != 0)
+            if (EmployeeID / 2 != 0)
             {
                 return false;
             }
@@ -40,7 +40,13 @@ namespace VPShelter
 
         public override string Uniform()
         {
-            return "Shirt and Name Tag";
+            return "Shirt and name tag";
+        }
+
+        public bool MogwaiAdoption()
+        {
+            Console.WriteLine("Did you tell the adopter the three rules of owning a mogwai?(True or False");
+            return bool.Parse(Console.ReadLine());
         }
 
     }

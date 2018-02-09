@@ -12,18 +12,18 @@ namespace VPShelter
         //invisible
 
         //Properties
-        //public List<Employees> AllEmployees { get; set; }
-        //public List<VirtualPets> AllPets { get; set; }
+        public List<Volunteer> AllVolunteers { get; set; }
+        public List<Mogwai> AllMogwai { get; set; }
 
         //Methods
-        //public List<string> DisplayPetNames()
+        //public List<string> DisplayMogwaiNames()
         //{
-        //    List<string> petNames = new List<string>();
-        //    foreach(VirtualPet in AllPets)
+        //    List<string> mogwaiNames = new List<string>();
+        //    foreach ()
         //    {
-        //        petNames.Add(.Name);
+        //        mogwaiNames.Add(mogwaiNames.Name);
         //    }
-        //    return petNames;
+        //    return mogwaiNames;
         //}
     }
 }

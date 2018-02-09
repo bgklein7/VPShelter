@@ -14,6 +14,9 @@ namespace VPShelter
         //Properties
         public string Name { get; set; }
         public string Description { get; set; }
+        public int BoredomLevel { get; set; }
+        public int ThirstLevel { get; set; }
+        public int HungerLevel { get; set; }
 
         //Constructors
         public VirtualPet()
@@ -31,6 +34,10 @@ namespace VPShelter
         {
             Name = name;
             Description = description;
+            BoredomLevel = boredomLevel;
+            ThirstLevel = thirstLevel;
+            HungerLevel = hungerLevel;
+
             
             
         }
