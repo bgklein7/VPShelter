@@ -32,9 +32,20 @@ namespace VPShelter
 
         //public int FedMogwai()
         //{
-        //    if()
+        //    Volunteer.FeedMogwai()
+        //        {
+        //        return mogwai1.HungerLevel++;
+        //        }
+            //if (Volunteer.FeedMogwai() == "The mogwai have been fed.")
+            //{
+            //    return mogwai1.HungerLevel--;
+            //}
+            //else
+            //{
+            //    return mogwai1.HungerLevel++;
+            //}
         //}
 
-        
+
     }
 }

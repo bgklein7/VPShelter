@@ -6,24 +6,35 @@ using System.Threading.Tasks;
 
 namespace VPShelter
 {
-    abstract class VirtualPetShelter
+    public abstract class VirtualPetShelter
     {
         //fields
         //invisible
 
         //Properties
         public List<Volunteer> AllVolunteers { get; set; }
-        public List<Mogwai> AllMogwai { get; set; }
+        //public List<Mogwai> AllMogwai { get; set; }
 
-        //Methods
+        List<Mogwai> allMogwai = new List<Mogwai>();
+        allMogwai.Add(new Mogwai());
+        
+            
+        
+
+        ////Methods
         //public List<string> DisplayMogwaiNames()
         //{
         //    List<string> mogwaiNames = new List<string>();
-        //    foreach ()
+        //    foreach (VirtualPet Name in AllMogwai)
         //    {
         //        mogwaiNames.Add(mogwaiNames.Name);
         //    }
-        //    return mogwaiNames;
-        //}
-    }
+            //return mogwaiNames;
+
+
+
+
+
+
+        }
 }

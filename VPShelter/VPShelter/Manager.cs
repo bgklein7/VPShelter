@@ -43,7 +43,7 @@ namespace VPShelter
             return "Shirt and name tag";
         }
 
-        public bool MogwaiAdoption()
+        public bool AdoptMogwai()
         {
             Console.WriteLine("Did you tell the adopter the three rules of owning a mogwai?(True or False");
             return bool.Parse(Console.ReadLine());
