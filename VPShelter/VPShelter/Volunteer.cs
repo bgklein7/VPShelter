@@ -12,7 +12,7 @@ namespace VPShelter
         //invisible
 
         //Properties
-        //inherited only
+        public string Allergies { get; set; }
 
        
 
@@ -30,7 +30,7 @@ namespace VPShelter
 
         //Methods
         
-    public override bool ShowID()
+        public override bool ShowID()
         {
             if(EmployeeID/2 == 0)
             {

@@ -20,12 +20,11 @@ namespace VPShelter
 
 
             int userChoice;
-            int userChoice2;
-            int userChoice3;
-
-            Console.WriteLine("Welcome to the Mr. Wing's Pet Shelter!");
+            
+            
             do
             {
+                Console.WriteLine("Welcome to the Mr. Wing's Pet Shelter!");
                 Console.WriteLine("What employee type are you?");
                 Console.WriteLine("Type 1 for Manager.");
                 Console.WriteLine("Type 2 for Volunteer.");
@@ -33,7 +32,8 @@ namespace VPShelter
 
                 userChoice = int.Parse(Console.ReadLine());
 
-                if (userChoice == 1) {
+                if (userChoice == 1)
+                {
                     Console.WriteLine("Welcome, Manager");
                     do
                     {
@@ -46,14 +46,14 @@ namespace VPShelter
                         Console.WriteLine("Adopt mogwai, type 1");
                         Console.WriteLine("Feed mogwai, type 2");
                         Console.WriteLine("Play with the mogwai, type 3");
-                        Console.WriteLine("To quit, type 4");
+                        Console.WriteLine("To exit Manager sub-menu, type 4");
 
-                        userChoice2 = int.Parse(Console.ReadLine());
+                        userChoice = int.Parse(Console.ReadLine());
 
-                        switch (userChoice2)
+                        switch (userChoice)
                         {
                             case 1:
-                                Console.WriteLine("Which mogwai would you like to adopt: " + mogwai1.Name + ", " + mogwai2.Name + ", or " + mogwai3.Name + "?");
+                                Console.WriteLine("Which mogwai would you like to adopt: " + mogwai1.Name + " (" + mogwai1.Description + "), " + mogwai2.Name + " (" + mogwai2.Description +  "), or " + mogwai3.Name + " (" + mogwai3.Description + ")?");
                                 string adoptee = Console.ReadLine();
                                 Console.WriteLine(adoptee + " is an excellent choice.");
                                 manager1.AdoptMogwai();
@@ -70,6 +70,7 @@ namespace VPShelter
                                 break;
                             case 4:
                                 Console.WriteLine("You have exited the Manager sub-menu.");
+                                Console.WriteLine("");
                                 break;
                         }
 
@@ -78,11 +79,9 @@ namespace VPShelter
                         mogwai2.TickMethod();
                         mogwai3.TickMethod();
 
-                    } while (userChoice2 != 4);
+                    } while (userChoice != 4);
                     
-                    
-
-                };
+                }
                 if (userChoice == 2)
                 {
 
@@ -98,11 +97,11 @@ namespace VPShelter
                         Console.WriteLine("Feed mogwai, type 1");
                         Console.WriteLine("Give the mogwai something to drink, type 2");
                         Console.WriteLine("Play with the mogwai, type 3");
-                        Console.WriteLine("To quit, type 4");
+                        Console.WriteLine("To exit Volunteer sub-menu, type 4");
 
-                        userChoice3 = int.Parse(Console.ReadLine());
+                        userChoice = int.Parse(Console.ReadLine());
 
-                        switch (userChoice3)
+                        switch (userChoice)
                         {
                             case 1:
                                 mogwai1.FedMogwai();
@@ -121,6 +120,7 @@ namespace VPShelter
                                 break;
                             case 4:
                                 Console.WriteLine("You have exited the Volunteer sub-menu.");
+                                Console.WriteLine("");
                                 break;
                         }
 
@@ -129,7 +129,7 @@ namespace VPShelter
                         mogwai2.TickMethod();
                         mogwai3.TickMethod();
 
-                    } while (userChoice3 != 4);
+                    } while (userChoice != 4);
                 }
                 else
                 {
@@ -137,7 +137,7 @@ namespace VPShelter
                     Console.WriteLine("Goodbye.");
                     break;
                 }
-            } while (userChoice != 3) ;
+            } while (userChoice != 3);
                
             
         }
