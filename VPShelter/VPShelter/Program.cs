@@ -64,10 +64,30 @@ namespace VPShelter
                                 mogwai3.FedMogwai();
                                 break;
                             case 3:
-                                mogwai1.PlayedWithMogwai();
-                                mogwai2.PlayedWithMogwai();
-                                mogwai3.PlayedWithMogwai();
-                                break;
+                                Console.WriteLine("Which mogwai do you wish to play with?");
+                                Console.WriteLine("Type 1 for " + mogwai1.Name + ".");
+                                Console.WriteLine("Type 2 for " + mogwai2.Name + ".");
+                                Console.WriteLine("Type 3 for " + mogwai3.Name + ".");
+                                int playmate = int.Parse(Console.ReadLine());
+                                if (playmate == 1)
+                                {
+                                    mogwai1.PlayedWithMogwai();
+                                    break;
+                                }
+                                if (playmate == 2)
+                                {
+                                    mogwai2.PlayedWithMogwai();
+                                    break;
+                                }
+                                if (playmate == 3)
+                                {
+                                    mogwai3.PlayedWithMogwai();
+                                    break;
+                                }
+                                else
+                                {
+                                    break;
+                                }
                             case 4:
                                 Console.WriteLine("You have exited the Manager sub-menu.");
                                 Console.WriteLine("");
@@ -104,20 +124,43 @@ namespace VPShelter
                         switch (userChoice)
                         {
                             case 1:
+                                volunteer1.FeedPets();
                                 mogwai1.FedMogwai();
                                 mogwai2.FedMogwai();
                                 mogwai3.FedMogwai();
                                 break;
                             case 2:
-                                mogwai1.WateredMogwai();
+                                volunteer1.WaterPets();
+                                mogwai1.WateredMogwai(); 
                                 mogwai2.WateredMogwai();
                                 mogwai3.WateredMogwai();
                                 break;
                             case 3:
-                                mogwai1.PlayedWithMogwai();
-                                mogwai2.PlayedWithMogwai();
-                                mogwai3.PlayedWithMogwai();
-                                break;
+                                Console.WriteLine("Which mogwai do you wish to play with?");
+                                Console.WriteLine("Type 1 for " + mogwai1.Name + ".");
+                                Console.WriteLine("Type 2 for " + mogwai2.Name + ".");
+                                Console.WriteLine("Type 3 for " + mogwai3.Name + ".");
+                                int playmate = int.Parse(Console.ReadLine());
+                                if (playmate == 1)
+                                {
+                                    mogwai1.PlayedWithMogwai();
+                                    break;
+                                }
+                                if (playmate == 2)
+                                {
+                                    mogwai2.PlayedWithMogwai();
+                                    break;
+                                }
+                                if (playmate == 3)
+                                {
+                                    mogwai3.PlayedWithMogwai();
+                                    break;
+                                }
+                                else
+                                {
+                                    break;
+                                }
+                                
                             case 4:
                                 Console.WriteLine("You have exited the Volunteer sub-menu.");
                                 Console.WriteLine("");

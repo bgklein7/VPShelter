@@ -46,5 +46,15 @@ namespace VPShelter
         {
             return "Name tag only";
         }
+
+        public void FeedPets()
+        {
+            Console.WriteLine("You fed them.");
+        }
+
+        public void WaterPets()
+        {
+            Console.WriteLine("You gave them water.");
+        }
     }
 }
